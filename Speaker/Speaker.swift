@@ -16,7 +16,7 @@ class Speaker {
   class func speech(text: String,
                     language: String,
                     interrupt: Bool = false,
-                    rate: Float = 0.0,
+                    rate: Float = AVSpeechUtteranceDefaultSpeechRate,
                     pitch: Float = 1.0,
                     started: @escaping ()->() = {},
                     finished: @escaping ()->() = {}) {
