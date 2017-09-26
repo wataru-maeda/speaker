@@ -10,7 +10,6 @@ Pass "text" and "language or country" to Speaker. That's all!
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", language: "en-US")
-// or
 Speaker.speech(text: "Hello Speaker!", country: .US)
 ```
 
@@ -18,7 +17,7 @@ Here is a list of [supported languages](https://github.com/WataruMaeda/speaker/b
 
 ## Interrupt speech
 
-`interrupt` can interrupt the speaking if it in the middle of the speech. The default value is `false`.
+`interrupt` can interrupt the speaking in the middle of the speech. The default value is `false`.
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", country: .US, interrupt: true)
@@ -26,7 +25,7 @@ Speaker.speech(text: "Hello Speaker!", country: .US, interrupt: true)
 
 ## Change Speed
 
-`rate` can adjust the speed of the speech. It is ranged from `0.0` to `1.0`. Default value is `0.0`
+`rate` can adjust the speed of the speech. It is ranged from `0.0` to `1.0`. The default value is `0.0`.
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", country: .US, rate: 1.0)
