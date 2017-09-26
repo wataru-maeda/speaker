@@ -6,7 +6,7 @@ Add the [Speaker](https://github.com/WataruMaeda/speaker/blob/master/Speaker/Spe
 
 ## Usage
 
-Pass "text" and "language or country" to Speaker. That's all!
+Pass `text` and `language` or `country` to Speaker. That's all!
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", language: "en-US")
@@ -70,7 +70,7 @@ Speaker.speech(text: "Hello Speaker", language: "en-US", started: {
 Speaker.play(resource: "sample", type: "mp3")
 ```
 
-* Callback (finished only) also can be inplemented like bellow sample
+* Callback (finished only) also can be implemented like bellow sample
 
 ```Swift
 Speaker.play(resource: "sample", type: "mp3", finished: {
