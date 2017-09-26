@@ -2,31 +2,27 @@
 
 ## Installation
 
-Add the Speaker to your project manually (drag & drop the file into your project).
+Add the (Speaker)[https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift] to your project manually (drag & drop the file into your project).
 
 ## Usage
 
 ### ・Basic Usage
 
-1. Import `Speaker` for setup
+Pass "text" and "language or country" to Speaker. That's all!
 
 ```Swift
-import Speaker
-```
-2. Pass "text" and "language" to Speaker. That's all!
-
-```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US")
+Speaker.speech(text: "Hello Speaker!", language: "en-US")
+Speaker.speech(text: "Hello Speaker!", country: .US)
 ```
 
-Here is a list of [supported languages](https://stackoverflow.com/questions/23827145/how-to-get-difference-language-code-for-ios-7-avspeechutterance-text-to-speech)
+Here is a list of [supported languages](https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift#L147L184)
 
 ### ・Interrupt speech
 
 `interrupt` can interrupt the speaking if it in the middle of the speech. The default value is `false`.
 
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", interrupt: true)
+Speaker.speech(text: "Hello Speaker!", country: .US, interrupt: true)
 ```
 
 ### ・Speech speed
@@ -34,14 +30,14 @@ Speaker.speak(text: "Hello Speaker", language: "en-US", interrupt: true)
 `rate` can adjust the speed of the speech. It is ranged from `0.0` to `1.0`. Default value is `0.0`
 
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", rate: 1.0)
+Speaker.speech(text: "Hello Speaker!", country: .US, rate: 1.0)
 ```
 ### ・Voice pitch
 
 `pitch` can decide the pitch of the voice. Value range is from `0.5` to `2.0`. The default value is `1.0`.
 
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", pitch: 0.5)
+Speaker.speech(text: "Hello Speaker!", country: .US, pitch: 1.0)
 ```
 
 ### ・Notice the start and end of the speech
@@ -49,22 +45,22 @@ Speaker.speak(text: "Hello Speaker", language: "en-US", pitch: 0.5)
 You might like to know when the speech starts and when it ends. In this case, bellow is how to get these callbacks.
 
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", started: {
-print("Started")
+Speaker.speech(text: "Hello Speaker!", country: .US, started: {
+  print("Started")
 })
 ```
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", finished: {
-print("Finished")
+Speaker.speech(text: "Hello Speaker!", country: .US, finished: {
+  print("Finished")
 })
 ```
 You can sets both callbacks
 
 ```Swift
-Speaker.speak(text: "Hello Speaker", language: "en-US", started: {
-print("Started")
+Speaker.speech(text: "Hello Speaker", language: "en-US", started: {
+  print("Started")
 }, finished: {
-print("Finished")
+  print("Finished")
 })
 ```
 
