@@ -2,22 +2,21 @@
 
 ## Installation
 
-Add the (Speaker)[https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift] to your project manually (drag & drop the file into your project).
+Add the [Speaker](https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift) to your project manually (drag & drop the file into your project).
 
 ## Usage
-
-### ・Basic Usage
 
 Pass "text" and "language or country" to Speaker. That's all!
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", language: "en-US")
+// or
 Speaker.speech(text: "Hello Speaker!", country: .US)
 ```
 
 Here is a list of [supported languages](https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift#L147L184)
 
-### ・Interrupt speech
+## Interrupt speech
 
 `interrupt` can interrupt the speaking if it in the middle of the speech. The default value is `false`.
 
@@ -25,14 +24,14 @@ Here is a list of [supported languages](https://github.com/WataruMaeda/speaker/b
 Speaker.speech(text: "Hello Speaker!", country: .US, interrupt: true)
 ```
 
-### ・Speech speed
+## Change Speed
 
 `rate` can adjust the speed of the speech. It is ranged from `0.0` to `1.0`. Default value is `0.0`
 
 ```Swift
 Speaker.speech(text: "Hello Speaker!", country: .US, rate: 1.0)
 ```
-### ・Voice pitch
+### Change Pitch
 
 `pitch` can decide the pitch of the voice. Value range is from `0.5` to `2.0`. The default value is `1.0`.
 
@@ -40,7 +39,7 @@ Speaker.speech(text: "Hello Speaker!", country: .US, rate: 1.0)
 Speaker.speech(text: "Hello Speaker!", country: .US, pitch: 1.0)
 ```
 
-### ・Notice the start and end of the speech
+## Get Start and End
 
 You might like to know when the speech starts and when it ends. In this case, bellow is how to get these callbacks.
 
@@ -54,12 +53,28 @@ Speaker.speech(text: "Hello Speaker!", country: .US, finished: {
   print("Finished")
 })
 ```
-You can sets both callbacks
+* You can sets both callbacks
 
 ```Swift
 Speaker.speech(text: "Hello Speaker", language: "en-US", started: {
   print("Started")
 }, finished: {
+  print("Finished")
+})
+```
+
+## Play Sound file
+
+* You can play sounds too. 
+
+```Swift
+Speaker.play(resource: "sample", type: "mp3")
+```
+
+* Callback (finished only) also can be inplemented like bellow sample
+
+```Swift
+Speaker.play(resource: "sample", type: "mp3", finished: {
   print("Finished")
 })
 ```
