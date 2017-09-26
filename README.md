@@ -6,7 +6,7 @@
 - [x] Corresponds to the language of 37 countries
 - [x] Easy to use, fully customisable regarding speech speed and voice tone
 - [x] Enable to know when the speech start and when it's end
-- [x] Avairable as sound playe with one line code
+- [x] Available as sound player
 
 ## Installation
 
