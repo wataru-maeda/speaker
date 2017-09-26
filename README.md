@@ -1,5 +1,13 @@
 # Speaker
 
+## Features
+
+- [x] Accessing voice function with one line code
+- [x] Corresponds to the language of 37 countries
+- [x] Easy to use, fully customisable regarding speech speed and voice tone
+- [x] Enable to know when the speech start and when it's end
+- [x] Avairable as sound playe with one line code
+
 ## Installation
 
 Add the [Speaker](https://github.com/WataruMaeda/speaker/blob/master/Speaker/Speaker.swift) to your project manually (drag & drop the file into your project).
